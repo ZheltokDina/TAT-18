@@ -1,0 +1,6 @@
+D:\MVS\DINA\TAT-18\FindMaxSubstring\bin\Debug\FindMaxSubstring.exe.config
+D:\MVS\DINA\TAT-18\FindMaxSubstring\bin\Debug\FindMaxSubstring.exe
+D:\MVS\DINA\TAT-18\FindMaxSubstring\bin\Debug\FindMaxSubstring.pdb
+D:\MVS\DINA\TAT-18\FindMaxSubstring\obj\Debug\FindMaxSubstring.csprojResolveAssemblyReference.cache
+D:\MVS\DINA\TAT-18\FindMaxSubstring\obj\Debug\FindMaxSubstring.exe
+D:\MVS\DINA\TAT-18\FindMaxSubstring\obj\Debug\FindMaxSubstring.pdb
