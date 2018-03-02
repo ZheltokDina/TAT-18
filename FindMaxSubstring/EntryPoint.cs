@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FindMaxSubstring
+namespace FindIdenticalConsecutiveCharacters
 {
   /// <summary>
   /// The entry point of the programm
@@ -15,10 +15,10 @@ namespace FindMaxSubstring
     {
       try
       {
-        LengthChecker checker = new LengthChecker(args[0]);
-        checker.OutputResult(checker.FindMaxLengthOfSubstring());
+        WorkingWithString checker = new WorkingWithString(args[0]);
+        checker.OutputResult(checker.FindMaxLengthOfIdenticalConsecutiveSymbols());
       }
-      catch(Exception ex)
+      catch (Exception ex)
       {
         Console.WriteLine(ex.Message);
       }
