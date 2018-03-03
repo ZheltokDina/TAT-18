@@ -39,7 +39,7 @@ namespace FindIdenticalConsecutiveCharacters
     /// <returns>return maximum length of identical consecutive characters in the string</returns>
     public int FindMaxLengthOfIdenticalConsecutiveSymbols()
     {
-      int maxLengthCount = 0;
+      int maxLengthCount = 1;
       int currentCount = 1;
       for (int i = 0; i < SequenceOfSymbols.Length - 1; i++)
       {
@@ -57,6 +57,6 @@ namespace FindIdenticalConsecutiveCharacters
         }
       }
       return maxLengthCount;
-    } 
+    }
   }
 }
