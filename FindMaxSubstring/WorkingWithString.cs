@@ -57,15 +57,6 @@ namespace FindIdenticalConsecutiveCharacters
         }
       }
       return maxLengthCount;
-    }
-
-    /// <summary>
-    /// Is used for console output 
-    /// </summary>
-    /// <param name="resultLenght">the resulting  number of identical consecutive characters</param>
-    public void OutputResult(int resultLenght)
-    {
-      Console.WriteLine(resultLenght.ToString());
-    }
+    } 
   }
 }
