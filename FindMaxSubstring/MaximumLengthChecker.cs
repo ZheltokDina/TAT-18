@@ -5,7 +5,7 @@ namespace FindIdenticalConsecutiveCharacters
   /// <summary>
   /// This class finds the maximum number of identical consecutive characters in the string
   /// </summary>
-  public class WorkingWithString
+  public class MaximumLengthChecker
   {
     private string sequenceOfSymbols;
     public string SequenceOfSymbols
@@ -28,7 +28,7 @@ namespace FindIdenticalConsecutiveCharacters
     /// The trivial constructor 
     /// </summary>
     /// <param name="sequenceOfSymbols">string entered from command line</param>
-    public WorkingWithString(string sequenceOfSymbols)
+    public MaximumLengthChecker(string sequenceOfSymbols)
     {
       this.SequenceOfSymbols = sequenceOfSymbols;
     }

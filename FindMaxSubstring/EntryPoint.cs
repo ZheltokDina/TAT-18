@@ -15,7 +15,7 @@ namespace FindIdenticalConsecutiveCharacters
     {
       try
       {
-        WorkingWithString checker = new WorkingWithString(args[0]);       
+        MaximumLengthChecker checker = new MaximumLengthChecker(args[0]);       
         Console.WriteLine(checker.FindMaxLengthOfIdenticalConsecutiveSymbols().ToString());
       }
       catch (Exception ex)
