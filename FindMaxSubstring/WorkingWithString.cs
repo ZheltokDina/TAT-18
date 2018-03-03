@@ -25,12 +25,12 @@ namespace FindIdenticalConsecutiveCharacters
     }
 
     /// <summary>
-    /// The trivial constructor with ToUpper() method 
+    /// The trivial constructor 
     /// </summary>
-    /// <param name="sequenceOfSymbols">string entered by the user</param>
-    public WorkingWithString(string userString)
+    /// <param name="sequenceOfSymbols">string entered from command line</param>
+    public WorkingWithString(string sequenceOfSymbols)
     {
-      this.SequenceOfSymbols = userString.ToUpper();
+      this.SequenceOfSymbols = sequenceOfSymbols;
     }
 
     /// <summary>
