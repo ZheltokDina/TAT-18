@@ -4,9 +4,9 @@ using System.Text;
 namespace taskDEV2
 {
   /// <summary>
-  /// This class finds substring with even idices
+  /// This class create substring with even idexes
   /// </summary>
-  class StringCreater
+  class StringCreator
   {
     private string sequenceOfSymbols;
     public string SequenceOfSymbols
@@ -29,16 +29,16 @@ namespace taskDEV2
     ///  The trivial constructor 
     /// </summary>
     /// <param name="sequenceOfSymbols"> string entered from console</param>
-    public StringCreater(string sequenceOfSymbols)
+    public StringCreator(string sequenceOfSymbols)
     {
       this.SequenceOfSymbols = sequenceOfSymbols;
     }
 
     /// <summary>
-    /// This method finds substring with even idexes
+    /// This method get a substring with even idexes
     /// </summary>
     /// <returns>substring with even idexes </returns>
-    public string CreateASubstringWithEvenIdices()
+    public string GetASubstringWithEvenIdexes()
     {
       StringBuilder substringWithEvenIdexes = new StringBuilder();
       for (int indexOfSymbol = 0; indexOfSymbol < SequenceOfSymbols.Length; indexOfSymbol += 2)

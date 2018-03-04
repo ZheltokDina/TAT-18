@@ -13,8 +13,8 @@ namespace taskDEV2
       {
         Console.WriteLine("Please, enter a string:");
         string sequenceOfSymbols = Console.ReadLine();
-        StringCreater creater = new StringCreater(sequenceOfSymbols);
-        Console.WriteLine(creater.CreateASubstringWithEvenIdices());
+        StringCreator creator = new StringCreator(sequenceOfSymbols);
+        Console.WriteLine(creator.GetASubstringWithEvenIdexes());
       }
       catch (Exception ex)
       {
