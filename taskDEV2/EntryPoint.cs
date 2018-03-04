@@ -13,8 +13,8 @@ namespace taskDEV2
       {
         Console.WriteLine("Please, enter a string:");
         string sequenceOfSymbols = Console.ReadLine();
-        StringCounter counter = new StringCounter(sequenceOfSymbols);
-        Console.WriteLine(counter.FindASubstringWithEvenIdices());
+        StringCreater creater = new StringCreater(sequenceOfSymbols);
+        Console.WriteLine(creater.CreateASubstringWithEvenIdices());
       }
       catch (Exception ex)
       {

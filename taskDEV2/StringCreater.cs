@@ -6,7 +6,7 @@ namespace taskDEV2
   /// <summary>
   /// This class finds substring with even idices
   /// </summary>
-  class StringCounter
+  class StringCreater
   {
     private string sequenceOfSymbols;
     public string SequenceOfSymbols
@@ -29,26 +29,26 @@ namespace taskDEV2
     ///  The trivial constructor 
     /// </summary>
     /// <param name="sequenceOfSymbols"> string entered from console</param>
-    public StringCounter(string sequenceOfSymbols)
+    public StringCreater(string sequenceOfSymbols)
     {
       this.SequenceOfSymbols = sequenceOfSymbols;
     }
 
     /// <summary>
-    /// This method finds substring with even idices
+    /// This method create substring with even idexes
     /// </summary>
-    /// <returns>substring with even idices </returns>
-    public string FindASubstringWithEvenIdices()
+    /// <returns>substring with even idexes </returns>
+    public string CreateASubstringWithEvenIdices()
     {
-      StringBuilder line = new StringBuilder();
+      StringBuilder substringWithEvenIdexes = new StringBuilder();
       for (int indexOfSymbol = 0; indexOfSymbol < SequenceOfSymbols.Length; indexOfSymbol++)
       {
         if (indexOfSymbol % 2 == 0)
         {
-          line.Append(SequenceOfSymbols[indexOfSymbol]);
+          substringWithEvenIdexes.Append(SequenceOfSymbols[indexOfSymbol]);
         }
       }
-      return line.ToString();
+      return substringWithEvenIdexes.ToString();
     }
   }
 }
