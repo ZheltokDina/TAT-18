@@ -4,7 +4,7 @@ using System.Text;
 namespace taskDEV2
 {
   /// <summary>
-  /// This class create substring with even idexes
+  /// This class create substring with even indexes
   /// </summary>
   class StringCreator
   {
@@ -35,17 +35,17 @@ namespace taskDEV2
     }
 
     /// <summary>
-    /// This method get a substring with even idexes
+    /// This method get a substring with even indexes
     /// </summary>
-    /// <returns>substring with even idexes </returns>
-    public string GetASubstringWithEvenIdexes()
+    /// <returns>substring with even indexes </returns>
+    public string GetASubstringWithEvenIndexes()
     {
-      StringBuilder substringWithEvenIdexes = new StringBuilder();
+      StringBuilder substringWithEvenIndexes = new StringBuilder();
       for (int indexOfSymbol = 0; indexOfSymbol < SequenceOfSymbols.Length; indexOfSymbol += 2)
       {
-        substringWithEvenIdexes.Append(SequenceOfSymbols[indexOfSymbol]);
+        substringWithEvenIndexes.Append(SequenceOfSymbols[indexOfSymbol]);
       }
-      return substringWithEvenIdexes.ToString();
+      return substringWithEvenIndexes.ToString();
     }
   }
 }

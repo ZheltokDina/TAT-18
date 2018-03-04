@@ -14,7 +14,7 @@ namespace taskDEV2
         Console.WriteLine("Please, enter a string:");
         string sequenceOfSymbols = Console.ReadLine();
         StringCreator creator = new StringCreator(sequenceOfSymbols);
-        Console.WriteLine(creator.GetASubstringWithEvenIdexes());
+        Console.WriteLine(creator.GetASubstringWithEvenIndexes());
       }
       catch (Exception ex)
       {
