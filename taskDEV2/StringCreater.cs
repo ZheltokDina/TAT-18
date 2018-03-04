@@ -40,12 +40,12 @@ namespace taskDEV2
     /// <returns>substring with even idexes </returns>
     public string CreateASubstringWithEvenIdices()
     {
-      StringBuilder SubstringWithEvenIdexes = new StringBuilder();
+      StringBuilder substringWithEvenIdexes = new StringBuilder();
       for (int indexOfSymbol = 0; indexOfSymbol < SequenceOfSymbols.Length; indexOfSymbol += 2)
       {
-        SubstringWithEvenIdexes.Append(SequenceOfSymbols[indexOfSymbol]);
+        substringWithEvenIdexes.Append(SequenceOfSymbols[indexOfSymbol]);
       }
-      return SubstringWithEvenIdexes.ToString();
+      return substringWithEvenIdexes.ToString();
     }
   }
 }
