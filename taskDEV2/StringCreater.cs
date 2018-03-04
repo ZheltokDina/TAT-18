@@ -35,20 +35,17 @@ namespace taskDEV2
     }
 
     /// <summary>
-    /// This method create substring with even idexes
+    /// This method finds substring with even idexes
     /// </summary>
     /// <returns>substring with even idexes </returns>
     public string CreateASubstringWithEvenIdices()
     {
-      StringBuilder substringWithEvenIdexes = new StringBuilder();
-      for (int indexOfSymbol = 0; indexOfSymbol < SequenceOfSymbols.Length; indexOfSymbol++)
+      StringBuilder SubstringWithEvenIdexes = new StringBuilder();
+      for (int indexOfSymbol = 0; indexOfSymbol < SequenceOfSymbols.Length; indexOfSymbol += 2)
       {
-        if (indexOfSymbol % 2 == 0)
-        {
-          substringWithEvenIdexes.Append(SequenceOfSymbols[indexOfSymbol]);
-        }
+        SubstringWithEvenIdexes.Append(SequenceOfSymbols[indexOfSymbol]);
       }
-      return substringWithEvenIdexes.ToString();
+      return SubstringWithEvenIdexes.ToString();
     }
   }
 }
