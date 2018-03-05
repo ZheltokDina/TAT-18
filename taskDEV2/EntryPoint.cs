@@ -9,17 +9,15 @@ namespace taskDEV2
   {
     static void Main(string[] args)
     {
-      try
+      string sequenceOfSymbols;
+      do
       {
-        Console.WriteLine("Please, enter a string:");
-        string sequenceOfSymbols = Console.ReadLine();
-        StringCreator creator = new StringCreator(sequenceOfSymbols);
-        Console.WriteLine(creator.GetASubstringWithEvenIndexes());
-      }
-      catch (Exception ex)
-      {
-        Console.WriteLine(ex.Message);
-      }
+        Console.WriteLine("Please, enter a non-empty string:");
+        sequenceOfSymbols = Console.ReadLine();
+      } while (String.IsNullOrEmpty(sequenceOfSymbols));
+
+      StringCreator creator = new StringCreator();
+      Console.WriteLine(creator.GetASubstringWithEvenIndexes(sequenceOfSymbols));
     }
   }
 }
