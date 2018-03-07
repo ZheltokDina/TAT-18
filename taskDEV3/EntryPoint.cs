@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Numerics;
 
 namespace taskDEV3
 {
@@ -11,7 +12,7 @@ namespace taskDEV3
     {
       try
       {
-        int numberInDecimalForm = int.Parse(args[0]);
+        BigInteger numberInDecimalForm = BigInteger.Parse(args[0]);
         int radix = int.Parse(args[1]);
         NumberConverter converter = new NumberConverter(numberInDecimalForm, radix);
         string convertibleNumber = converter.ConvertNumberToNewRadix();
