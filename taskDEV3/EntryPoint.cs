@@ -19,13 +19,9 @@ namespace taskDEV3
       }
       catch (FormatException ex)
       {
-        Console.WriteLine(ex.Message);        
-      }
-      catch (IncorrectRadixException ex)
-      {
         Console.WriteLine(ex.Message);
       }
-      catch (IncorrectDecimalNumberException ex)
+      catch (ArgumentOutOfRangeException ex)
       {
         Console.WriteLine(ex.Message);
       }

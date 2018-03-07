@@ -1,9 +1,10 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace taskDEV3
 {
   /// <summary>
-  /// This class is used for converting from one number system to another
+  /// This class is used for converting from decimal number system to another
   /// </summary>
   class NumberConverter
   {
@@ -12,26 +13,24 @@ namespace taskDEV3
     public int Radix { get; private set; }
 
     /// <summary>
-    /// This constructor is used to initialize properties
+    /// This constructor allows to create an object if the correct data is entered,
+    /// in other case there will be exception
     /// </summary>
-    /// <param name="numberInDecimalForm">number in the decimal form</param>
-    /// <param name="radix">radix</param>
+    /// <param name="numberInDecimalForm">the number for transformation </param>
+    /// <param name="radix">radix in which necessary to transform</param>
     public NumberConverter(int numberInDecimalForm, int radix)
     {
-      if (radix < 2 || radix > 20)
+      if(radix < 2 || radix > 20 || numberInDecimalForm <= 0)
       {
-        throw new IncorrectRadixException();
+        throw new ArgumentOutOfRangeException();
       }
-      if (numberInDecimalForm <= 0)
-      {
-        throw new IncorrectDecimalNumberException();
-      }
+      if(numberInDecimalForm <= 0) 
       NumberInDecimalForm = numberInDecimalForm;
       Radix = radix;
     }
 
     /// <summary>
-    /// This  method is used for converting from one number system to another
+    /// This  method is used for converting from decimal number system to another
     /// </summary>
     /// <returns> convertible number</returns>
     public string ConvertNumberToNewRadix()
