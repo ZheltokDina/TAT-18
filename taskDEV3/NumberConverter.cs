@@ -28,7 +28,7 @@ namespace taskDEV3
       NumberInDecimalForm = numberInDecimalForm;
       Radix = radix;
     }
-
+    
     /// <summary>
     /// This  method is used for converting from decimal number system to another
     /// </summary>
@@ -37,20 +37,31 @@ namespace taskDEV3
     {
       BigInteger bufferNumber = NumberInDecimalForm;
       StringBuilder numberInNewRadix = new StringBuilder();
-      do
+      if(NumberInDecimalForm.IsZero)
       {
-        bufferNumber = NumberInDecimalForm / Radix;
-        BigInteger remainder = NumberInDecimalForm % Radix;
-        if (remainder < 10)
+        numberInNewRadix.Append(0);
+      }
+      if (NumberInDecimalForm.IsOne)
+      {
+        numberInNewRadix.Append(1);
+      }
+      else
+      {
+        do
         {
-          numberInNewRadix.Insert(0, remainder);
-        }
-        else
-        {
-          numberInNewRadix.Insert(0, (char)(NUMBER_TO_CHAR_START_POINT + remainder));
-        }
-        NumberInDecimalForm = bufferNumber;
-      } while (bufferNumber != 0);
+          bufferNumber = NumberInDecimalForm / Radix;
+          BigInteger remainder = NumberInDecimalForm % Radix;
+          if (remainder < 10)
+          {
+            numberInNewRadix.Insert(0, remainder);
+          }
+          else
+          {
+            numberInNewRadix.Insert(0, (char)(NUMBER_TO_CHAR_START_POINT + remainder));
+          }
+          NumberInDecimalForm = bufferNumber;
+        } while (bufferNumber != 0);
+      }
       return numberInNewRadix.ToString();
     }
   }

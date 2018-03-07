@@ -14,7 +14,7 @@ namespace taskDEV3
       {
         BigInteger numberInDecimalForm = BigInteger.Parse(args[0]);
         int radix = int.Parse(args[1]);
-        NumberConverter converter = new NumberConverter(numberInDecimalForm, radix);
+        NumberConverter converter = new NumberConverter(numberInDecimalForm, radix);        
         string convertibleNumber = converter.ConvertNumberToNewRadix();
         Console.WriteLine($"Convertible number is { convertibleNumber}");
       }
