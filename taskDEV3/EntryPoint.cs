@@ -17,11 +17,15 @@ namespace taskDEV3
         string convertibleNumber = converter.ConvertNumberToNewRadix();
         Console.WriteLine($"Convertible number is { convertibleNumber}");
       }
-      catch (FormatException)
+      catch (FormatException ex)
       {
-        Console.WriteLine("The input string had the wrong format");
+        Console.WriteLine(ex.Message);        
       }
-      catch (IncorrectParametrsException ex)
+      catch (IncorrectRadixException ex)
+      {
+        Console.WriteLine(ex.Message);
+      }
+      catch (IncorrectDecimalNumberException ex)
       {
         Console.WriteLine(ex.Message);
       }

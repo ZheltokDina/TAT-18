@@ -42,7 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IncorrectParametrsException.cs" />
+    <Compile Include="IncorrectDecimalNumberException.cs" />
+    <Compile Include="IncorrectRadixException.cs" />
     <Compile Include="NumberConverter.cs" />
     <Compile Include="EntryPoint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

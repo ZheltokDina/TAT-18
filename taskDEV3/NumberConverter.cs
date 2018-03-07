@@ -11,15 +11,20 @@ namespace taskDEV3
     public int NumberInDecimalForm { get; private set; }
     public int Radix { get; private set; }
 
+    /// <summary>
+    /// This constructor is used to initialize properties
+    /// </summary>
+    /// <param name="numberInDecimalForm">number in the decimal form</param>
+    /// <param name="radix">radix</param>
     public NumberConverter(int numberInDecimalForm, int radix)
     {
       if (radix < 2 || radix > 20)
       {
-        throw new IncorrectParametrsException();
+        throw new IncorrectRadixException();
       }
       if (numberInDecimalForm <= 0)
       {
-        throw new IncorrectParametrsException();
+        throw new IncorrectDecimalNumberException();
       }
       NumberInDecimalForm = numberInDecimalForm;
       Radix = radix;
