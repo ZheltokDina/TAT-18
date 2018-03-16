@@ -12,7 +12,7 @@ namespace taskDEV3
     {
       try
       {
-        NumberConverter converter = new NumberConverter(BigInteger.Parse(args[0]), int.Parse(args[1]));        
+        NumberConverter converter = new NumberConverter(BigInteger.Parse(args[0]), int.Parse(args[1]));
         Console.WriteLine($"Convertible number is { converter.ConvertNumberToNewRadix()}");
       }
       catch (ArgumentOutOfRangeException ex)
