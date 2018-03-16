@@ -6,7 +6,7 @@ namespace taskDEV2.tests
   public class StringCreatorTests
   {
     [Fact]
-    public void ÑheckForTheFormationOfTheCorrectSubstring()
+    public void CheckForTheFormationOfTheCorrectSubstring()
     {
       StringCreator creator = new StringCreator("abcdef");
       Assert.Equal("ace", creator.GetASubstringWithEvenIndexes());
