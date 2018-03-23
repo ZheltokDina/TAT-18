@@ -52,19 +52,22 @@ namespace taskDEV6
         if (currentCommand.Equals(COUNT_TYPES))
         {
           ExecuteMetod = new CountTypesStrategy();
-          ExecuteMetod.Do(products);
+          double countTypesOfProduct = ExecuteMetod.Do(products);
+          Console.WriteLine($"Count types of products is {countTypesOfProduct}");
           continue;
         }
         if (currentCommand.Equals(COUNT_ALL))
         {
           ExecuteMetod = new CountAllStrategy();
-          ExecuteMetod.Do(products);
+          double countAllProducts = ExecuteMetod.Do(products);
+          Console.WriteLine($"Count all of products is {countAllProducts}");
           continue;
         }
         if (currentCommand.Equals(AVERAGE_PRICE))
         {
           ExecuteMetod = new AveragePriceStrategy();
-          ExecuteMetod.Do(products);
+          double averagePrice = ExecuteMetod.Do(products);
+          Console.WriteLine($"Avarege price is {averagePrice}");
           continue;
         }
         if (currentCommand.Length >= AVERAGE_PRICE.Length)
@@ -73,7 +76,8 @@ namespace taskDEV6
           {
             string type = currentCommand.Substring(AVERAGE_PRICE.Length + FIRST_LETTER_OF_TYPE);
             ExecuteMetod = new AveragePriceTypeStrategy();
-            ExecuteMetod.Do(products, type);
+            double averagePriceType = ExecuteMetod.Do(products, type);
+            Console.WriteLine($"Average price type is {averagePriceType}");
             continue;
           }
         }

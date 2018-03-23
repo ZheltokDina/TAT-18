@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
+using System.Text.RegularExpressions;
 
 namespace taskDEV6
 {
@@ -11,12 +13,28 @@ namespace taskDEV6
     public string Name { get; set; }
     public int Count { get; set; }
     public double Price { get; set; }
- 
-    public Product( string type, string name, int count, double price)
+
+    public Product(string type, string name, int count, double price)
     {
+      if (!(Regex.IsMatch(type, "^[a-zA-Z ]+$")))
+      {
+        throw new FormatException("Uncorrent type of product.Please, try enter again!");
+      }
       Type = type;
+      if (string.IsNullOrEmpty(name))
+      {
+        throw new FormatException("Uncorrent name of product.Please, try enter again!");
+      }
       Name = name;
+      if (count <= 0)
+      {
+        throw new FormatException("Uncorrent count of product.Please, try enter again!");
+      }
       Count = count;
+      if (price <= 0)
+      {
+        throw new FormatException("Uncorrent price of product.Please, try enter again!");
+      }
       Price = price;
     }
     /// <summary>

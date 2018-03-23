@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace taskDEV6
 {
@@ -11,7 +10,7 @@ namespace taskDEV6
     /// <summary>
     /// This method considers number of product types
     /// </summary>
-    public void Do(List<Product> products, string type)
+    public double Do(List<Product> products, string type)
     {
       List<string> types = new List<string>();
       foreach (var product in products)
@@ -20,8 +19,8 @@ namespace taskDEV6
         {
           types.Add(product.Type);
         }
-        Console.WriteLine($"Count types of products is {types.Count}");
       }
+      return types.Count;
     }
   }
 }

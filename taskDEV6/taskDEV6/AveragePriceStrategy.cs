@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace taskDEV6
 {
@@ -11,7 +10,7 @@ namespace taskDEV6
     /// <summary>
     /// This method considers the average price of all products
     /// </summary>
-    public void Do(List<Product> products, string type)
+    public double Do(List<Product> products, string type)
     {
       double generalPrice = 0.0;
       foreach (var product in products)
@@ -19,7 +18,7 @@ namespace taskDEV6
         generalPrice += product.Price;
       }
       double averagePrice = generalPrice / products.Count;
-      Console.WriteLine($"Avarege price is {averagePrice}");
+      return averagePrice;
     }
   }
 }

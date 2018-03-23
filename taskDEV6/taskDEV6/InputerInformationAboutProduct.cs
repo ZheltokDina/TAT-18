@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text.RegularExpressions;
 
 namespace taskDEV6
 {
@@ -24,28 +23,12 @@ namespace taskDEV6
       Console.WriteLine(INPUT_DATA);
       Console.Write(TYPE_OF_PRODUCT);
       string type = Console.ReadLine();
-      if (!(Regex.IsMatch(type, "^[a-zA-Z ]+$")))
-      {
-        throw new FormatException("Uncorrent type of product.Please, try enter again!");
-      }
       Console.Write(NAME_OF_PRODUCT);
       string name = Console.ReadLine();
-      if (string.IsNullOrEmpty(name))
-      {
-        throw new FormatException("Uncorrent name of product.Please, try enter again!");
-      }
       Console.Write(COUNT_OF_PRODUCT);
       int count = int.Parse(Console.ReadLine());
-      if (count <= 0)
-      {
-        throw new FormatException("Uncorrent count of product.Please, try enter again!");
-      }
       Console.Write(PRICE_OF_PRODUCT);
       double price = double.Parse(Console.ReadLine());
-      if (price <= 0)
-      {
-        throw new FormatException("Uncorrent price of product.Please, try enter again!");
-      }
       return new Product(type, name, count, price);
     }
   }
