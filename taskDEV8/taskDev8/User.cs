@@ -4,7 +4,7 @@ namespace taskDev8
   /// <summary>
   /// This class is used to initialize properties
   /// </summary>
-  class User
+  public class User
   {
     public enum SexOfAPerson
     {

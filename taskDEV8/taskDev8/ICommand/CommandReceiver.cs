@@ -6,7 +6,7 @@ namespace taskDev8
   /// <summary>
   ///  This class is the recipient  of a сommand
   /// </summary>
-  class CommandReceiver
+  public class CommandReceiver
   {
     private List<User> listOfUsers;
     public CommandReceiver(List<User> listOfUsers)

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using taskDev8.Command;
 
 namespace taskDev8
@@ -28,7 +27,6 @@ namespace taskDev8
       SelectCommand command = new SelectCommand(receiver);
       command.MenuCommand();
     }
-
     static void GetNamesake(object sender, NamesakeEventArg e)
     {
       Console.WriteLine("find a namesake");
