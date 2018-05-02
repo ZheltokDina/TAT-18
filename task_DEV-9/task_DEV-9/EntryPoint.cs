@@ -12,7 +12,7 @@ namespace task_DEV_9
       ChromeDriver browser = new ChromeDriver();
       browser.Manage().Window.Maximize();
       LoginPage login = new LoginPage(browser);
-      login.InputData("Dina_141@mail.ru", "Dina2014Jura");
+      login.InputData("******", "*****");
       SelectCommand command = new SelectCommand(browser);
       command.MenuCommand();
       browser.Close();
