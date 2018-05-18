@@ -5,6 +5,9 @@ using taskDEV10.Pages;
 
 namespace taskDEV10
 {
+  /// <summary>
+  /// The entry point of the programm
+  /// </summary>
   class EntryPoint
   {
     static void Main(string[] args)
@@ -12,16 +15,22 @@ namespace taskDEV10
       IWebDriver driver = new ChromeDriver();
       driver.Manage().Window.Maximize();
       driver.Navigate().GoToUrl("https://av.by/");
-      HomePage homePage = new HomePage(driver, args[0]);
-      if (homePage.CheckForThePresenceOfThisMark())
+      string mark = args[0];
+      HomePage homePage = new HomePage(driver, mark);
+      try
       {
-        homePage.EstablishMark();
-        MarkPage markPage = new MarkPage(driver);
-        Console.WriteLine(markPage.ReadAllModelWithNumberOfCarThisModel());
+        homePage.CloseAdvertising();
+        MarkPage markPage = homePage.NavigateToMarkPage();
+        var modelAndNumberCarOfModel = markPage.ListCars();
+        var sortedList = markPage.SortedByNumberOfCars(modelAndNumberCarOfModel);
+        foreach (var element in sortedList)
+        {
+          Console.WriteLine($"Model: {element.Key}-- Number of cars: {element.Value}");
+        }
       }
-      else
+      catch (NotFoundException ex)
       {
-        Console.WriteLine("Please, to check the mark spelling");
+        Console.WriteLine(ex.Message);
       }
     }
   }

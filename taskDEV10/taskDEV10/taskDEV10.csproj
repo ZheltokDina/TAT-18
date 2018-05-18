@@ -49,8 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntryPoint.cs" />
-    <Compile Include="HomePageLocators.cs" />
-    <Compile Include="MarkPageLocators.cs" />
+    <Compile Include="Locators.cs" />
     <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\MarkPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
